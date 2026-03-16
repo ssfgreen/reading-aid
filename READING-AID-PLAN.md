@@ -552,7 +552,7 @@ server.tool(
 
 Run as a stdio server for Claude Code / Claude Desktop integration:
 ```bash
-npx tsx src/mcp/server.ts
+bun run src/mcp/server.ts
 ```
 
 Or as an SSE server for web-based MCP clients:
