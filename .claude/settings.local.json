@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/s2852430/Development/Reading/reading-aid -type f -name .*)"
+    ]
+  }
+}
