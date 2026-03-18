@@ -1,0 +1,279 @@
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #fafaf7;
+  color: #2c2c2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(92, 158, 173, 0.12), transparent 35%),
+    linear-gradient(180deg, #f7f5ef 0%, #fafaf7 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 2rem 1.25rem;
+  border-right: 1px solid #e5e3de;
+  background: rgba(242, 240, 235, 0.76);
+  backdrop-filter: blur(16px);
+}
+
+.sidebar-header h1,
+.reader-header h2 {
+  margin: 0;
+  font-family: "Literata", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #5c9ead;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lede {
+  margin: 1rem 0 0;
+  color: #5f5c57;
+  font-size: 1rem;
+}
+
+.upload-card,
+.document-card,
+.panel {
+  border: 1px solid #e5e3de;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 18px 40px rgba(44, 44, 44, 0.06);
+}
+
+.upload-card {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.upload-card span,
+.section-heading span,
+.document-card strong,
+.annotation-card strong {
+  display: block;
+}
+
+.upload-card small,
+.section-heading small,
+.document-card small,
+.document-card span {
+  color: #6b6b6b;
+}
+
+.upload-card input {
+  display: none;
+}
+
+.document-list {
+  margin-top: 1.5rem;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+}
+
+.annotation-heading {
+  margin-top: 1.25rem;
+}
+
+.document-card {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.document-card.active {
+  border-color: #5c9ead;
+  transform: translateY(-1px);
+}
+
+.reader {
+  padding: 2rem;
+}
+
+.reader-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+}
+
+.meta-grid {
+  display: grid;
+  gap: 0.4rem;
+  color: #6b6b6b;
+  text-align: right;
+}
+
+.reader-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.panel {
+  padding: 1.25rem;
+}
+
+.markdown-panel pre {
+.markdown-panel > :first-child {
+  margin-top: 0;
+}
+
+.markdown-panel > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-panel h1,
+.markdown-panel h2,
+.markdown-panel h3,
+.markdown-panel h4 {
+  font-family: "Literata", Georgia, serif;
+  line-height: 1.15;
+}
+
+.markdown-panel p,
+.markdown-panel li,
+.markdown-panel blockquote {
+  font-family: "Literata", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.markdown-panel blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 2px solid #d9d4cb;
+  color: #5f5c57;
+}
+
+.markdown-panel ul,
+.markdown-panel ol {
+  padding-left: 1.25rem;
+}
+
+.annotation-panel {
+  align-self: start;
+}
+
+.outline-list,
+.category-list {
+  margin-bottom: 1.25rem;
+}
+
+.outline-item,
+.category-item {
+  padding: 0.35rem 0;
+  color: #5f5c57;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.category-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.annotation-card + .annotation-card {
+  margin-top: 0.75rem;
+}
+
+.annotation-kicker {
+  color: #5c9ead;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.annotation-card p,
+.empty-state,
+.empty-panel p {
+  margin-bottom: 0;
+  color: #5f5c57;
+}
+
+.inline-annotation {
+  background: color-mix(in srgb, var(--annotation-color) 22%, white);
+  border-left: 2px solid var(--annotation-color);
+  padding: 0 0.1rem;
+}
+
+.muted-copy {
+  color: #6b6b6b;
+}
+
+.error-banner {
+  margin-top: 1rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid #b5838d;
+  background: rgba(181, 131, 141, 0.12);
+  color: #6e4450;
+}
+
+@media (max-width: 960px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #e5e3de;
+  }
+
+  .reader-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reader-header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .meta-grid {
+    text-align: left;
+  }
+}
